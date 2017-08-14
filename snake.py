@@ -29,4 +29,14 @@ foodSpawn=True
 direct='RIGHT'
 changeTo=direct
 
+def gameOver():
+	font=pygame.font.SysFont('monaco',72)
+	GOsurf=font.render('Game Over!', True, red)
+	Gorect=GOsurf.get_rect()
+	Gorect.midtop=(360,20)
+	playSurface.blit(GOsurf,Gorect)
+	pygame.display.flip()
 
+gameOver()
+
+time.sleep(10)
